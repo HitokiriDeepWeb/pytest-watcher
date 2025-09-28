@@ -2,12 +2,9 @@
 name = "pytest-watcher"
 version = "0.4.3"
 description = "Automatically rerun your tests on file modifications"
-authors = ["Olzhas Arystanov <o.arystanov@gmail.com>"]
+authors = [{name = "Olzhas Arystanov", email = "o.arystanov@gmail.com"}]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/olzhasar/pytest-watcher"
-repository = "https://github.com/olzhasar/pytest-watcher"
-documentation = "https://pytest-watcher.readthedocs.io/en/latest/"
 keywords = ["pytest", "watch", "watcher"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -18,13 +15,20 @@ classifiers = [
     "Topic :: Software Development :: Testing",
     "Topic :: Utilities",
 ]
-include = ["LICENSE"]
 
 requires-python = ">=3.13"
 
 dependencies = [
     "watchdog>=2.0.0",
 ]
+
+[project.urls]
+homepage = "https://github.com/olzhasar/pytest-watcher"
+repository = "https://github.com/olzhasar/pytest-watcher"
+documentation = "https://pytest-watcher.readthedocs.io/en/latest/"
+
+[tool.uv]
+package = true
 
 [project.scripts]
 pytest-watcher = "pytest_watcher:run"
